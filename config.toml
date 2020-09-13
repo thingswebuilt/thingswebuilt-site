@@ -4,7 +4,7 @@ title = "Things We Built"
 theme = "Mainroad"
 
 paginate = "10" # Number of posts per page
-disqusShortname = "thingswebuilt" # Enable Disqus comments by entering your Disqus shortname
+disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Author] # Used in authorbox
