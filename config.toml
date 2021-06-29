@@ -62,15 +62,15 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params.widgets.social]
   # Enable parts of social widget
-  facebook = "thingswebuilt"
-  twitter = "thingswebuilt"
+  # facebook = "thingswebuilt"
+  # twitter = "thingswebuilt"
   #instagram = "username"
   #linkedin = "username"
   #telegram = "username"
   github = "thingswebuilt"
   #gitlab = "username"
   #bitbucket = "username"
-  email = "hello@thingswebuilt.com"
+  # email = "hello@thingswebuilt.com"
 
 # Custom social links
 #[[Params.widgets.social.custom]]
