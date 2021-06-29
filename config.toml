@@ -35,7 +35,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   #customJS = ["js/custom.js"] # Include custom JS files
 
 [Params.style.vars]
-  highlightColor = "#e22d30" # Override highlight color
+  highlightColor = "#4b8275" #"#e22d30" # Override highlight color
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
@@ -43,7 +43,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [Params.logo]
-  image = "img/placeholder.png" # Logo image. Path relative to "static"
+  image = "img/things-we-built-logo.png" # Logo image. Path relative to "static"
   title = "Things We Built" # Logo title, otherwise will use site title
   subtitle = "A site about things. Things that we built." # Logo subtitle
 
