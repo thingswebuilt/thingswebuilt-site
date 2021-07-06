@@ -21,7 +21,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   twitter_cards = true # Enable Twitter Cards if true
   readmore = false # Show "Read more" button in list if true
   authorbox = true # Show authorbox at bottom of pages if true
-  toc = true # Enable Table of Contents
+  toc = false # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
   mainSections = ["posts"] # Specify section pages to show on home page and the "Recent articles" widget
@@ -35,7 +35,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   #customJS = ["js/custom.js"] # Include custom JS files
 
 [Params.style.vars]
-  highlightColor = "#e22d30" # Override highlight color
+  highlightColor = "#4b8275" #"#e22d30" # Override highlight color
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
@@ -43,7 +43,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [Params.logo]
-  image = "img/placeholder.png" # Logo image. Path relative to "static"
+  image = "img/things-we-built-logo.png" # Logo image. Path relative to "static"
   title = "Things We Built" # Logo title, otherwise will use site title
   subtitle = "A site about things. Things that we built." # Logo subtitle
 
@@ -62,15 +62,15 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params.widgets.social]
   # Enable parts of social widget
-  facebook = "thingswebuilt"
-  twitter = "thingswebuilt"
+  # facebook = "thingswebuilt"
+  # twitter = "thingswebuilt"
   #instagram = "username"
   #linkedin = "username"
   #telegram = "username"
   github = "thingswebuilt"
   #gitlab = "username"
   #bitbucket = "username"
-  email = "hello@thingswebuilt.com"
+  # email = "hello@thingswebuilt.com"
 
 # Custom social links
 #[[Params.widgets.social.custom]]
