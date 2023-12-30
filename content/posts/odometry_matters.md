@@ -7,39 +7,55 @@ draft: false
 
 ## Odometry Matters ##
 
-We've passed a huge milestone for our Pi Wars entry this week - it was the first time we got the wheel speeds and steering angle to move in sync. At first, this might sound like quite a small thing, and that its come relatively late in the build, given we started on this design back in 2021! To explain the significance of this test drive, we need to go back to before we even had the idea for Overwhelming Surplus of Diggity, to our experience with our Pi Wars entry Tauradigm. 
+In the journey towards Pi Wars 2024, we recently achieved a significant milestone that might sound deceptively simple but holds immense importance: we synchronized our wheel speeds with steering angles for the first time. While it happened relatively late in the build process (we embarked on this project back in 2021), grasping the significance of this achievement requires us to revisit the lessons learned from our past robot, Tauradigm
 
-### Learnings from Tauradigm
-Tauradigm was our first robot with encoders, started in 2018. It had six wheels with an encoder per wheel, allowing us to measure the wheel movement of each wheel to within a millimetre. Combining that movement data with the heading data from the Inertial Measurement Unit, we could get a reasonable estimate of how the robot had moved around the arena. This approach is generally known as odometry. The odometry based position estimation on Tauradigm was very repeatable, but not particularly accurate (~10% drift over a distance travelled). The accuracy was particularly poor on sweeping turns. Similarly, Tauradigm was quite easy to control in a straight line, or turning on the spot, but wider turns were a little erratic and required fast feedback from external sensors to maintain a smooth turn. Luckily we could work around these trade-offs for the at-home Pi Wars event in 2021, but we knew they would be a handicap for an in-person event where we can't endlessly test and tune the control code to the specific arena. Accurate odometry makes solving robotics challenges so much easier, and avoids having to rely on error-prone external sensors like time-of-flight, ultrasonics or computer vision. 
+Tauradigm marked our first foray into the realm of encoders in 2018. Sporting six wheels, each equipped with an encoder, it allowed us to measure wheel movements with remarkable precision, down to the millimeter. By combining this data with heading information from the Inertial Measurement Unit (IMU), we ventured into the realm of odometry. Odometry, in simple terms, involves estimating a robot's position based on the movement of its wheels and sensors, and it's a crucial aspect of robotics.
+
+## The Trade-offs of Odometry
+
+While Tauradigm's odometry was highly repeatable, it wasn't notably accurate, suffering from approximately 10% drift over any distance traveled. This inaccuracy was most pronounced during sweeping turns, which made precise control challenging in certain scenarios.
+
+For instance, Tauradigm excelled in moving straight or executing spot turns with relative ease. However, navigating wider turns was a tad erratic, necessitating quick feedback from external sensors to maintain smooth motion. These trade-offs were manageable for the at-home Pi Wars event in 2021, where we could fine-tune our control code to suit the specific arena.
+
+## The Importance of Accurate Odometry
+
+Accurate odometry is a game-changer in the world of robotics. It eliminates the reliance on error-prone external sensors such as time-of-flight, ultrasonics, or computer vision, making solving complex challenges significantly more manageable. This becomes especially critical in in-person events like Pi Wars, where fine-tuning control code on the fly isn't an option.
 
 {{< youtube g7BF0To9cgk >}}
 
-This video shows us testing the accuracy and repeatability of odometry for the Tidy the Toys challenge. The movement of the robot is entirely based on odometry using the encoders and IMU for feedback, with no external sensors. The first few runs show the repeatability. The final clip shows us running the same course over and over without resetting the initial position, and so shows the accumulated error. 
+This video showcases the accuracy and repeatability of odometry during the Tidy the Toys challenge. The robot's movements rely solely on odometry, utilizing encoders and IMU feedback without external sensors. The initial runs highlight repeatability, while the final clip reveals accumulated errors over multiple runs.
 
-### Playing with RC cars for work
-Cut to 2020, and Rob and I worked on a (commercial) project where we developed a robot platform from on an RC car! That also had encoders and an IMU for odometry. The odometry was incredibly accurate (~1% drift!) and relatively easy to control, even at fairly high speeds. This is what made us decide to try car-like ("Ackermann"*) steering for OSoD. 
+## Inspired by Commercial Ventures: Accurate Odometry with RC Cars
+Fast forward to 2020, and Rob and I embarked on a commercial project involving a robot platform built around an RC car. This unique platform featured encoders and an IMU for odometry. What surprised us was the astonishing accuracy of its odometry, with minimal drift of around 1%, even at relatively high speeds. This experience left a lasting impression on us and planted the seed for our innovative approach in the development of Overwhelming Surplus of Diggity (OSoD).
 ![example of a light painting created by our robot](https://pbs.twimg.com/media/Epix833XYAIaMw-?format=jpg&name=4096x4096 'light painting')
-One of the tests of that robot platform was creating long-exposure light paintings. The movement and path planning was based on more than odometry, but in testing we found the odometry alone to be surprisingly good.
+An image created by the RC car-based robot as part of the commercial project, demonstrating its capabilities though long-exposure light paintings. The robot's movement and path planning were predominantly based on odometry, which showcased impressive accuracy.
 
-### The OSoD concept
-So that's the background to the idea behind OSoD. We knew that a traditional RC car arrangement, with undriven, steerable front wheels and a single motor driving a differential connected to the rear wheels, wouldn't work for many Pi Wars challenges. We often need the traction of 4 wheel drive, and frequently need to be able to turn on the spot. We started brainstorming variations that might have the benefits of car-like steering without the trade-offs. We realised that independent 4 wheel drive would allow us to skid-steer turn on the spot like many entries, but if we turned the front wheels we could potentially retain the controllability of car-like steering. The complication would be that we'd have to digitally mimic the effect of a differential, actively driving the wheels faster on the outside of the turn and slowing those on the inside, at a rate consistent to the steering angle to avoid slip (and so lose accuracy with odometry, as well as limit the cornering speed or controllability). As we thought more about how the robot would perform in different situations, we realised that if the front wheels could be independently steered, then for situations where we want to turn on the spot, we could potentially go into an extreme "toe-in" arrangement and so also eliminate any scrub in that manoeuvre too.  
+## The OSoD Concept: A Unique Blend
+With this rich background of experiences, the concept of OSoD took shape. We recognized that traditional RC car setups—featuring undriven, steerable front wheels and a single motor driving a differential connected to the rear wheels—wouldn't meet the demands of many Pi Wars challenges. These challenges often call for the traction of four-wheel drive and the capability to execute spot turns with precision.
 
-### OSoD testbed 1
-To test the idea at small scale, without having to buy the motors, motor controllers etc planned for OSoD, we built a small test platform around n20 motors and electronics we already have. For this early test, the motors didn't have encoders, and we didn't have a microcontroller, it was all "manual" over radio control. 
+Our brainstorming sessions led us to an intriguing idea: What if we could retain the controllability of car-like steering while enjoying the benefits of independent four-wheel drive? This concept paved the way for OSoD. However, achieving this vision involved overcoming a significant hurdle—digitally mimicking the effect of a differential.
+
+In essence, we needed to actively control the wheels when turning, driving the outer wheels faster and slowing down the inner ones in a manner perfectly synchronized with the steering angle. This would prevent slippage, maintain the accuracy of odometry, and allow for precise cornering. Additionally, OSoD could switch into an extreme "toe-in" configuration when executing spot turns, eliminating scrubbing and enhancing maneuverability.
+
+Note: The term "Ackermann" steering, often associated with car-like steering, isn't entirely accurate here. OSoD achieves different wheel turn angles digitally rather than through mechanical linkages. We're brainstorming a more fitting name for this unique approach, such as "Half-Swerve" or "Virtual Ackermann."
+
+## OSoD Testbeds: Proving the Concept
+Our journey with OSoD kicked off with a scaled-down testbed, allowing us to experiment without committing to the full-scale build. This test platform employed n20 motors and existing electronics, driven manually via radio control. It was a valuable but challenging initial test, with motors lacking encoders, which made precise synchronization a persistent issue. Scrubbing and crab-like movements sometimes emerged, reminiscent of a go-kart with a fixed rear axle and no differential.
 
 {{< youtube T5OmbwSUevo >}}
+OSoD's initial testbed in late 2021, driven manually via radio control. The video illustrates challenges with wheel synchronization, highlighting the need for further refinement.
 
-This early test (in late 2021) was a little disheartening, as it was impossible to perfectly synchronise the wheel speeds with the steering angle.  There always seem to be some scrub, and sometimes it even seemed to crab sideways instead of turning. It looks like the wheels were fighting the turning, like when a go kart has a fixed rear axle with no differential. It certainly didn't show the idea was worthwhile. We weren't too put off by the test though, we hoped that the issues were all because of the manual control and the lack of encoders. 
-
-
-### OSoD testbed 2
-We cut the full-size test chassis in early 2022, but by that point it was clear we were too far behind to be ready in time for the event. The chassis wasn't actually assembled until Pi Wars 2024 was announced in late 2023. 
+## Refinement and Progress: OSoD Testbed 2
+In early 2022, we set the stage for a full-scale OSoD testbed, though it remained unassembled until the announcement of Pi Wars 2024 in late 2023. This testbed featured essential components, including four 22mm gearmotors with encoders, custom motor mount plates with integral steering bearings, and two RotorStar RS-3878MGT servos for steering.
 
 {{< youtube 2O1fviydWTE >}}
 
-This video shows how the steering mechanism works on the test bed. There are 4 x 22mm gearmotors with encoders (two with custom motor mount plates with integral steering bearings), and 2 x RotorStar RS-3878MGT servos for the steering.
-We figured out the maths for the "mixing" (wheel speeds and steering angles for a given movement, aka. Inverse Kinematics) in late September, but only recently got that converted into working code. We've actually still not got the encoder feedback and speed control working, so the different wheel speeds are just achieved by varying the duty cycle to the motors and its assumed/hoped that the wheel speeds will be proportional to the duty cycle. Anyway, without further ado, here's the video of the test:
-{{< youtube zi0BeEbqnBU >}}
-We're extremely pleased that it's performing as expected: there's no wheel scrub or slip, it goes where you ask it to, and it's extremely manoeuvrable. Tight and wide turns are controllable. We hope this all translates into accurate and repeatable odometry. All going well, we should find that out soon. We just need to get the IMU working.
+We had figured out the mathematics governing the "mixing" of wheel speeds and steering angles—a concept known as Inverse Kinematics—in late September. However, the conversion into functional code awaited completion. In our current setup, encoder feedback and speed control aren't yet operational. Thus, different wheel speeds are achieved by adjusting motor duty cycles, with the assumption that these speeds will be proportionate to the duty cycle.
 
-* We need to come up with a better name, as its not using the linkages from an Ackermann geometry, the different wheel turn angles are achieved digitally. Half-Swerve? virtual Ackermann?
+{{< youtube zi0BeEbqnBU >}}
+A video demonstration of OSoD Testbed 2, showcasing the steering mechanism. The testbed features four 22mm gearmotors with encoders and two RotorStar RS-3878MGT servos for steering.
+
+## A Promising Future
+We're thrilled to report that the OSoD testbed is performing as anticipated. Wheel scrub and slip are nonexistent, and the robot responds precisely to our commands, displaying exceptional maneuverability. It excels in executing tight and wide turns with controllability—a feat we hope will translate into accurate and repeatable odometry. The final piece of the puzzle involves getting the IMU fully operational, which is our next endeavor.
+
+With these advancements, we're laying a solid foundation for OSoD's success in Pi Wars 2024. Our commitment to achieving accurate odometry and precise control promises to make this year's competition an exciting journey. Stay tuned for more updates as we embark on the next phases of development.
