@@ -4,43 +4,49 @@ date: 2024-01-01T16:53:06+01:00
 draft: false
 ---
 
-# The maths behind independent four wheel drive with "virtual" ackermann steering
+# Unveiling the Mathematics Behind Independent Four-Wheel Drive with "Virtual" Ackermann Steering
 
-Whether controlling OSoD in skid or "Ackermann" steering modes, we use the desired forward and angular velocities as the inputs to the "inverse kinematics" of calculating the wheel speeds and steering angles. This isn't that different from how the joystick inputs are usually interpreted for a skid steer robot, where stick up/down movement is considered the requested forward velocity, and stick left/right is the rate of turn. The only difference is we pre-scale them a somewhat arbitrary amount[^1] and give them the units metres per second (m/s) for linear velocity, and radians per second (rad/s) for the rate of turn. You'll see in a moment why we use the slightly weird and academic "radians" over the much more common units of degrees, revolutions or rpm. From that input, to get the robot to move in the desired fashion, we need to calculate the speed of each of the wheels, and the turn angle for each of the front wheels, as shown in the diagram below:
+In our journey to harness the full potential of Overwhelming Surplus of Diggity (OSoD), we delve into the intricate world of mathematics that underpins our innovative approach. Whether we're commanding OSoD in skid steering mode or leveraging its unique "virtual" Ackermann steering, the foundation lies in calculating the wheel speeds and steering angles using a concept known as "inverse kinematics."
+
+This concept might seem reminiscent of interpreting joystick inputs for a skid-steer robot, where forward velocity corresponds to stick up/down movement, and rate of turn aligns with stick left/right motion. However, there's a crucial difference—we apply a somewhat arbitrary scaling factor[^1] and adopt units like meters per second (m/s) for linear velocity and radians per second (rad/s) for the rate of turn. In a moment, we'll uncover why we embrace the slightly unconventional "radians" over more common units like degrees, revolutions, or rpm. These inputs serve as the foundation for our quest to guide OSoD in the desired manner, necessitating the calculation of wheel speeds and steering angles.
 
 ![General Ackermann steering arrangement](ackermann1.PNG "General Ackermann steering arrangement")
 
-With a forward velocity (\\(v\\)) in m/s and the turn rate (\\(w\\)) in rad/s, the centreline radius (\\(R_{CL}\\)) of the resulting turn in metres can be calculated from the simple formula:
+Starting with a forward velocity (\(v\)) in m/s and a turn rate (\(w\)) in rad/s, we can determine the centreline radius (\(R_{CL}\)) of the resulting turn in meters using a straightforward formula:
 $$R_{CL} = v/w \tag{1}$$
 
-Note that this specific formula only works without any extra scaling or conversion factors if the chosen units are used. Once we know the radius of the turn, all the speeds and angles can be calculated fairly quickly by forming a right angle triangle around the wheel of interest:
+It's crucial to note that this formula maintains its integrity without additional scaling or conversion factors only when the chosen units are employed. Armed with the turn radius, we can swiftly calculate all the required speeds and angles by constructing a right-angle triangle around the wheel of interest:
 ![Geometry of Ackermann steering](ackermann2.PNG "Geometry of Ackermann steering")
 
-We can then use Pythagoras to go from the chassis radius of turn, the wheel base and the wheel track to the radius of turn of an individual wheel. Taking the front right (FR) wheel as an example:
+Pythagoras' theorem comes into play, helping us transition from the chassis's turn radius, wheelbase, and wheel track to the individual wheel's turn radius. Taking the front right (FR) wheel as an example:
 
 ![Radius of turn for front right wheel](ackermann3.PNG "Radius of turn for front right wheel")
 
-The specific radius that wheel is travelling around is:
+The specific radius that this wheel traverses is given by::
 $$R_{FR} = \sqrt{\left( \left(R_{CL}+\frac{wheelTrack}{2} \right)^2+wheelBase^2 \right)} \tag{2}$$
 
-Since the whole chassis, including the wheels, has the same angular velocity around the centre of the turn, the linear speed of that wheel can be calculated by rearranging the original formula in (1):
+Since the entire chassis, including the wheels, maintains the same angular velocity around the center of the turn, we can calculate the linear speed of the wheel by rearranging the initial formula in (1):
 $$v_{FR} = w\times R_{FR} \tag{3}$$
 
-The turn angle \\(\theta_{FR}\\) can be calculated by the corresponding angles principle[^2]:
+The turn angle \\(\theta_{FR}\\) can be determined using the corresponding angles principle[^2]:
 $$\theta_{FR} = \tan^{-1}\left(\frac{wheelBase}{R_{CL}+\frac{wheelTrack}{2})}\right) \tag{4}$$
 
-The above calculations work for all combinations of forward velocity and turn rate, except for when the turn rate is zero. When either the forward velocity or turn rate are zero, the formulas can be made simpler. With a turn rate of zero, the "radius of turn" becomes infinite, so the formulas break down from the beginning at (1), but then in that case, it's fairly obvious that all the wheel speeds must be equal and match the chassis's forward velocity, and the front wheels point straight ahead. When the forward velocity is zero, the chassis's turn radius also becomes zero, so the formula for the front right wheel's radius of turn can be simplified to:
+The above calculations are applicable for all combinations of forward velocity and turn rate, except when the turn rate is zero. In cases where either the forward velocity or turn rate equals zero, the formulas can be simplified. With a turn rate of zero, the "radius of turn" becomes infinite, rendering the formulas unusable from the outset at (1). However, in this scenario, it's evident that all wheel speeds must be identical and match the chassis's forward velocity, while the front wheels align straight ahead.
+
+When the forward velocity equals zero, the chassis's turn radius reduces to zero. Consequently, the formula for the front right wheel's turn radius can be simplified to:
 $$R_{FR} = \sqrt{\left( \left( \frac{wheelTrack}{2} \right)^2+wheelBase^2 \right)} \tag{2b}$$
 
-With a turn angle of:
+This yields a turn angle \\(\theta_{FR}\\) of:
 $$\theta_{FR} = \tan^{-1}\left(\frac{2\times wheelBase}{wheelTrack)}\right) \tag{4b}$$
 
-As shown in the diagram below:
+As depicted in the diagram below:
 ![Steering arrangement when forward velocity is zero](ackermann4.PNG "Steering arrangement when forward velocity is zero")
 
-Our code for calculating the wheel speeds and angles from the inputs can be found here: https://github.com/thingswebuilt/osod24_firmware/blob/main/libs/mixer/src/ackermann_strategy.cpp
+For a deeper dive into our code that calculates wheel speeds and angles from these inputs, you can explore the following link:  [OSoD Firmware Ackermann Strategy](https://github.com/thingswebuilt/osod24_firmware/blob/main/libs/mixer/src/ackermann_strategy.cpp) .
+
+In this detailed exploration, we've uncovered the intricate mathematics that drive OSoD's exceptional control, making it an exciting contender for Pi Wars 2024 and beyond. Stay tuned for more insights and updates as we continue our journey of innovation and robotics mastery.
 
 
-[^1]: scaling was chosen so that joystick full forward made all motors go full speed forward, and full left made the right-hand motors go full forward, and the left-hand motors full reverse.
+[^1]: The scaling factor was chosen so that full joystick forward input corresponds to all motors operating at maximum forward speed, and full left input makes the right-hand motors run at maximum forward speed, while the left-hand motors operate in full reverse..
 
-[^2]: https://thirdspacelearning.com/gcse-maths/geometry-and-measure/corresponding-angles/
+[^2]: [corresponding angles principle](https://thirdspacelearning.com/gcse-maths/geometry-and-measure/corresponding-angles/)
