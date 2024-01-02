@@ -12,7 +12,7 @@ This concept might seem reminiscent of interpreting joystick inputs for a skid-s
 
 ![General Ackermann steering arrangement](ackermann1.PNG "General Ackermann steering arrangement")
 
-Starting with a forward velocity (\(v\)) in m/s and a turn rate (\(w\)) in rad/s, we can determine the centreline radius (\(R_{CL}\)) of the resulting turn in meters using a straightforward formula:
+Starting with a forward velocity (\\(v\\)) in m/s and a turn rate (\\(w\\)) in rad/s, we can determine the centreline radius (\\(R_{CL}\\)) of the resulting turn in meters using a straightforward formula:
 $$R_{CL} = v/w \tag{1}$$
 
 It's crucial to note that this formula maintains its integrity without additional scaling or conversion factors only when the chosen units are employed. Armed with the turn radius, we can swiftly calculate all the required speeds and angles by constructing a right-angle triangle around the wheel of interest:
