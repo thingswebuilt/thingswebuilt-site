@@ -7,6 +7,10 @@ paginate = "10" # Number of posts per page
 disqusShortname = "thingswebuilt" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
+[markup.goldmark]
+    [markup.goldmark.renderer]
+    unsafe = true
+    
 [Author] # Used in authorbox
   name = "Things We Built"
   bio = "We build things, then write about them."
