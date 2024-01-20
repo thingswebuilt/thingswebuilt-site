@@ -55,7 +55,8 @@ No official connection to any companies or organisations.
 > **Software:** Separated architectural units. Fast IMU/encoder feedback with continuous location estimation, and route planning algorithms. Automated hardware self-test.   
 >
 > Attachments for challenges:  
-> **Lava Palaver:** Base robot. Eco-disaster: a barrel categorisation, segregation and storage system below the robot, so that all collected barrels of each type are deposited in one go at the end of the run.  
+> **Lava Palaver:** Base robot.  
+> **Eco-disaster:** a barrel categorisation, segregation and storage system below the robot, so that all collected barrels of each type are deposited in one go at the end of the run.  
 > **Escape route:** standard sensor configuration, no attachment.  
 > **Minesweeper:** downward facing light sensors on each corner to detect lit panels as quickly as possible.  
 > **Zombie Apocalypse:** will have a flywheel based soft foam ball launcher with vision based auto aiming supported by a pan and tilt servos.  
