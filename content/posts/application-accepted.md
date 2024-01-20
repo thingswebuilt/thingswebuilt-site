@@ -47,7 +47,7 @@ The Obstacle Course challenge presents unique hurdles that are difficult to plan
 ## Exploring New Possibilities ##
 In our quest for innovation, we're also exploring new hardware possibilities. Rob has introduced an ESP32 setup with an interactive serial console, a separate logger, and task scheduling. This versatile board offers built-in hardware peripherals and could serve as a valuable addition to our Pi Wars platform.
 
-[Insert Image of the ESP32 Test Setup]
+![An AI imagined picture of the ESP32 Test rig](an_ESP32_based_test_rig_on_solderless_breadboard_with_a_led.png "An AI imagined picture of the ESP32 test rig")
 
 Additionally, as we progress, we're mindful of the benefits of a compact robot design for certain challenges like Escape Route, Lava Palava, and Obstacle Course. We've made our chassis as small as practical while ensuring space for essential electronics. Collaboration is key, and we're considering the transition from Solidworks to  Fusion for seamless teamwork.
 
