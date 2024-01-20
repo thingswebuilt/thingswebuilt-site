@@ -36,7 +36,7 @@ The excitement is building, and the gears of innovation are turning as Team Cybe
 > _[Redacted]_
 
 ### Twitter handle
-> @markmellors
+> [@markmellors](https://twitter.com/markmellors)
 
 ### Details of your team and robot  
 
