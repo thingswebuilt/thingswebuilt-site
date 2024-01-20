@@ -9,43 +9,44 @@ draft: false
 The excitement is building, and the gears of innovation are turning as Team Cyberwar embarks on its journey to participate in Pi Wars 2024. For those curious minds eager to peek behind the curtain of our (hopefully) successful Pi Wars application, or for those simply intrigued by our ambitious plans, this post provides an exclusive look at what we've submitted.
 
 
-Pi Wars 2020 Application form
+## Pi Wars 2020 Application form
 
-**Team name**  
+### **Team name**  
 > Team Cyberwar
 
-**Robot name (if different)**  
+### Robot name (if different)  
 > Overwhelming Surplus of Diggity
 
-**Team category**
+### Team category
 > Advanced
 
-**Country**
+### Country
 > UK
 
-**Nearest town/city, county and country**\
+### Nearest town/city, county and country
 > HITCHIN
 
-**Name of team leader (real name, please)**
+### Name of team leader (real name, please)
 > Mark Mellors
 
-**Your e-mail address**
+### Your e-mail address
 > [Redacted]
 
-**Contact telephone number**
+### Contact telephone number
 > [Redacted]
 
-**Twitter handle**
+### Twitter handle
 > @markmellors
 
-**Details of your team and robot**
-**Team details**
+### Details of your team and robot  
+
+#### Team details
 > **Mark Mellors:** Professional Mechanical Engineer, lead on the mechanical side of the robot.  
 **Rob B:** Professional Computerman, lead on the software side. Previously an adviser and supporter on Piradigm.  
 **Robert K:** Professional Magic Smoke Wizard.  
 No official connection to any companies or organisations.
 
-**Some details about your expected robot**
+#### Some details about your expected robot
 > Fully autonomous in all challenges, with 4 wheel drive and Ackerman steering.  
 > Arrays of various sensors, including: internal (encoders and inertial measurement), proximity (distance sensors, reflective) and vision (pi camera), possibly supported by offboard sensors (e.g. UWB beacons).  
 > Hot-swappable batteries, so no need to stop or power down for battery charging/changing. Auxiliary power port so can be run continuously in tethered mode with no recharging or battery changing required.  
@@ -62,41 +63,42 @@ No official connection to any companies or organisations.
 > **Obstacle course**: standard sensor arrangement.
 
 
-**What robotics experience do you have?**
+### What robotics experience do you have?
 > All the team have extensive experience in previous Pi Wars entries, fighting robots (big and small) and commercial robotics work.
 
-**Why do you want to enter Pi Wars? What is your motivation to design/build/program a robot? What are you looking to achieve? What are you looking to learn?**
+### Why do you want to enter Pi Wars? What is your motivation to design/build/program a robot? What are you looking to achieve? What are you looking to learn?
 > Retribution! To show that full autonomous is possible! But also, as before, to inspire, share and stretch ourselves.
 
-**Please select the challenge types that your robot will be competing in:**
+### Please select the challenge types that your robot will be competing in:
 >  X Challenges run autonomously  
 >  O Challenges by remote control  
 >  X Pre-competition blogging challenge.  
 
-**Getting some help**
+### Getting some help
 > We do not require assistance.
 
-**Offering to help**
+### Offering to help
 > Yes, I can offer to be a mentor or give help to another team.
 
 
-**Application supporting information**  
-**Were you accepted into the 2020 competition and ready to compete? If so, what was your team name**
-> Yes, Robot name: Tauradigm
+### Application supporting information  
 
-**Have you been involved with Pi Wars before?**
+#### Were you accepted into the 2020 competition and ready to compete? If so, what was your team name
+> Yes, Robot name: **Tauradigm**
+
+#### Have you been involved with Pi Wars before?
 > All the team have extensive experience in many previous Pi Wars entries. Also exhibiting with Bighak and a heavyweight fighting robot (rendered in cardboard), and AutonomousMicroPiNoon. Also helped a little with course construction (minimal maze painting) and on the setup days. Can help again with both if required.
 
-**File Upload**
+### File Upload
 > ![A CAD render of the robot](application_render.png "Application Render")
 
-**Some quick questions**  
-**Please confirm that you will be able to attend Pi Wars in person:**
+### Some quick questions  
+
+#### Please confirm that you will be able to attend Pi Wars in person:
 > Yes, at least one member of our team will attend and under-18s will be accompanied
 
-**If not selected to compete, would you be happy to be a 'Reserve'?**
+### If not selected to compete, would you be happy to be a 'Reserve'?
 > Yes
- 
 
 ## What Lies Ahead ##
 
