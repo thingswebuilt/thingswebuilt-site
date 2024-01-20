@@ -30,10 +30,10 @@ The excitement is building, and the gears of innovation are turning as Team Cybe
 > Mark Mellors
 
 ### Your e-mail address
-> [Redacted]
+> _[Redacted]_
 
 ### Contact telephone number
-> [Redacted]
+> _[Redacted]_
 
 ### Twitter handle
 > @markmellors
