@@ -12,8 +12,7 @@ Our approach to the Eco Disaster challenge involves collecting all barrels into 
 
 **The Catapillar Track Barrel Mover**: This mechanism shows promise, but we're working on enhancing its grip to ensure it can efficiently push all six barrels back into the cartridge.
 
-
-[Insert Video of the Mechanism in Action]
+ {{< youtube CG86y4fIiUo >}}
 
 [![top view of the barrel collecting mechanism](resized_top.jpg "top view of the barrel collecting mechanism")](top.jpg)[![bottom view of the barrel collecting mechanism](resized_bottom.jpg "bottom view of the barrel collecting mechanism")](bottom.jpg)
 
