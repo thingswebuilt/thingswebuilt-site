@@ -70,9 +70,9 @@ No official connection to any companies or organisations.
 > Retribution! To show that full autonomous is possible! But also, as before, to inspire, share and stretch ourselves.
 
 ### Please select the challenge types that your robot will be competing in:
->  X Challenges run autonomously  
->  O Challenges by remote control  
->  X Pre-competition blogging challenge.  
+> - [X] Challenges run autonomously  
+> - [ ] Challenges by remote control  
+> - [X] Pre-competition blogging challenge.  
 
 ### Getting some help
 > We do not require assistance.
