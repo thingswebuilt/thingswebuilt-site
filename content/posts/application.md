@@ -40,9 +40,9 @@ Pi Wars 2020 Application form
 
 **Details of your team and robot**
 **Team details**
-> Mark Mellors: Professional Mechanical Engineer, lead on the mechanical side of the robot.  
-Rob B: Professional Computerman, lead on the software side. Previously an adviser and supporter on Piradigm.  
-Robert K: Professional Magic Smoke Wizard.  
+> **Mark Mellors:** Professional Mechanical Engineer, lead on the mechanical side of the robot.  
+**Rob B:** Professional Computerman, lead on the software side. Previously an adviser and supporter on Piradigm.  
+**Robert K:** Professional Magic Smoke Wizard.  
 No official connection to any companies or organisations.
 
 **Some details about your expected robot**
@@ -51,15 +51,15 @@ No official connection to any companies or organisations.
 > Hot-swappable batteries, so no need to stop or power down for battery charging/changing. Auxiliary power port so can be run continuously in tethered mode with no recharging or battery changing required.  
 > Two fuses/removable links, so logic and drive power can be protected and enabled separately.
 >
-> Software: Separated architectural units. Fast IMU/encoder feedback with continuous location estimation, and route planning algorithms. Automated hardware self-test.   
+> **Software:** Separated architectural units. Fast IMU/encoder feedback with continuous location estimation, and route planning algorithms. Automated hardware self-test.   
 >
 > Attachments for challenges:  
-> Lava Palaver: Base robot. Eco-disaster: a barrel categorisation, segregation and storage system below the robot, so that all collected barrels of each type are deposited in one go at the end of the run.  
-> Escape route: standard sensor configuration, no attachment.  
-> Minesweeper: downward facing light sensors on each corner to detect lit panels as quickly as possible.  
-> Zombie Apocalypse: will have a flywheel based soft foam ball launcher with vision based auto aiming supported by a pan and tilt servos.  
-> Pi Noon: a flashing Infrared headlight attachment, with the flashing in sync with the camera frame rate, so we can do crude depth perception based on the change in brightness with/without headlight, and so accurately detect the opponents balloons.  
-> Obstacle course: standard sensor arrangement.
+> **Lava Palaver:** Base robot. Eco-disaster: a barrel categorisation, segregation and storage system below the robot, so that all collected barrels of each type are deposited in one go at the end of the run.  
+> **Escape route:** standard sensor configuration, no attachment.  
+> **Minesweeper:** downward facing light sensors on each corner to detect lit panels as quickly as possible.  
+> **Zombie Apocalypse:** will have a flywheel based soft foam ball launcher with vision based auto aiming supported by a pan and tilt servos.  
+> **Pi Noon:** a flashing Infrared headlight attachment, with the flashing in sync with the camera frame rate, so we can do crude depth perception based on the change in brightness with/without headlight, and so accurately detect the opponents balloons.  
+> **Obstacle course**: standard sensor arrangement.
 
 
 **What robotics experience do you have?**
