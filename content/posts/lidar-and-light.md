@@ -17,6 +17,10 @@ The arenas present unique navigational challenges, from the tight 0.6m wide corr
 ## The Sunlight Challenge in Optical Sensing # 
 Sunlight has been the bane of optical sensors in past competitions. Indoors, lux levels are manageable (typically below 50klux), but in driect sunlight they can be blisteringly high, reaching up to 130klux. This intense light can overwhelm sensors rated for only 5klux, leading to miscalculations. However, sensors operating at IR wavelengths, like the 940nm VL53L0x and 850nm TF Luna, have varying degrees of sunlight resistance. The conundrum lies in the disparity between the figures espoused online, actual lux measurements, the specific spectrum transmissibility of the windows at the event and the IR wavelengths of the sensors. All this makes it hard to predict sensor performance based on their lux ratings alone.
 
+## Exploring TOF Sensors: A Comprehensive Comparison ##
+
+In our quest to select the ideal Time Of Flight (TOF) sensor for Pi Wars, we conducted an extensive search encompassing all available TOF sensors. Our focus was on popular models and those boasting high lux ratings or suitability for outdoor and sunlight-exposed environments. This table presents a comprehensive overview of TOF sensors, featuring key specifications relevant to Pi Wars challenges. It's worth noting that this compilation includes all the sensors we encountered during our search, offering a holistic view of the available options.
+
 | Manufacturer | Model | Price  | Range (m) | Points | FOV  | Update Rate | Max lux |            datasheet            |
 |:------------:|:-----:|:------:|:---------:|:------:|:-----:|:----------------:|:---------:|:----------------------------------------|
 | ST  | vl6180 | £14 | 0.1[^1]  | 1 | 42° | 150hz[^1] | 15k ("up to 100klux?!)  | [Datasheet](https://www.pololu.com/file/0J961/VL6180X.pdf) |
