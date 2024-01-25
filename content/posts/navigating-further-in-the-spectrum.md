@@ -10,7 +10,7 @@ tags:
 
 # Navigating the Spectrum - Sensor Testing Insights #
 ### Introduction ###
-In our previous blog post, [Navigating the Spectrum](lidar-and-light.md), we embarked on a journey to select the most suitable sensors for our robotic endeavors, particularly for the challenges of PiWars. Building on that foundation, we've now put these sensors to the test, literally. The goal was simple yet crucial: verify if the real-world performance of our chosen sensors aligns with their datasheet specifications. This endeavor isn't just about validating our choices; it's about providing valuable insights for the entire PiWars community on sensor selection and deployment.
+In our previous blog post, [Navigating the Spectrum](lidar-and-light.md), we embarked on a journey to select the most suitable sensors for our robotic endeavours, particularly for the challenges of Pi Wars. Building on that foundation, we've now put these sensors to the test, literally. The goal was simple yet crucial: verify if the real-world performance of our chosen sensors aligns with their datasheet specifications. This endeavour isn't just about validating our choices; it's about providing valuable insights for the entire Pi Wars community on sensor selection and deployment.
 
 ## Methodology ##
 ### Test Rig Configuration: ###
@@ -31,7 +31,7 @@ The true distance to the target was meticulously set for each test, providing us
 
 ### Objective of the Tests: ###
 Our primary objective was to scrutinize each sensor's accuracy and consistency. We aimed to see how closely each sensor's readings matched the actual distances, and whether any sensor's performance was significantly influenced by the testing conditions.
-The data gathered would not only guide our sensor selection for our own robot but also serve as a beacon for other PiWars competitors navigating the complex terrain of sensor technology.
+The data gathered would not only guide our sensor selection for our own robot but also serve as a beacon for other Pi Wars competitors navigating the complex terrain of sensor technology.
 In the next section, we will delve into the results of these tests, providing a clear and detailed comparison between our empirical findings and the datasheet specifications of each sensor.
 
 ## Test Results and Analysis ##
@@ -83,20 +83,20 @@ Similar performance was observed under partial sunlight, with the sensor unable 
 
 The TF-Luna's consistent performance across various conditions makes it a reliable choice for both indoor and outdoor applications, aligning well with its datasheet specifications.
 The VL53L0X, while performing adequately at shorter distances in controlled conditions, shows limitations under bright lighting, suggesting its use may be best suited for indoor or shaded environments with light coloured targets.
-The TMF8801's performance suggests it is more suited for controlled, indoor environments with shorter range requirements and  lighter targets.
-These results provide valuable insights into sensor capabilities and limitations, guiding us in selecting the most appropriate sensor for our robot's needs and offering a resource for other PiWars competitors.
+The TMF8801's performance suggests it is more suited for controlled, indoor environments with shorter range requirements and lighter targets.
+These results provide valuable insights into sensor capabilities and limitations, guiding us in selecting the most appropriate sensor for our robot's needs and offering a resource for other Pi Wars competitors.
 
 
 ## Strategic Considerations: ##
 
-For our robot's design, which demands adaptability across various PiWars challenges, the TF-Luna appears to be the most strategic choice. Its robustness across different distances and environments aligns well with the diverse nature of the competition.
+For our robot's design, which demands adaptability across various Pi Wars challenges, the TF-Luna appears to be the most strategic choice. Its robustness across different distances and environments aligns well with the diverse nature of the competition.
 Incorporating sensor redundancy might be a strategy to consider. Utilizing the VL53L0X for certain tasks where its characteristics match the requirements could provide a backup or complementary system to the primary TF-Luna sensor.
-The insights gained from this testing will not only inform our sensor selection but also provide valuable guidance to other PiWars competitors. Understanding each sensor's strengths and limitations is key to optimizing robot performance in different challenges.
+The insights gained from this testing will not only inform our sensor selection but also provide valuable guidance to other Pi Wars competitors. Understanding each sensor's strengths and limitations is key to optimizing robot performance in different challenges.
 
 # Conclusion #
 In our quest to equip our robot with the most effective sensory apparatus, the journey through these tests has been enlightening. The TF-Luna, VL53L0X, and TMF8801 sensors each exhibit unique traits that define their suitability for different scenarios.
 
-The data-driven approach of this testing regime has illuminated the path forward, clearly indicating the TF-Luna as a frontrunner for our needs, with the VL53L0X as a potential secondary option. As we progress in the PiWars competition, these findings will not only refine our robot's design but also contribute to the broader community's understanding of sensor capabilities.
+The data-driven approach of this testing regime has illuminated the path forward, clearly indicating the TF-Luna as a frontrunner for our needs, with the VL53L0X as a potential secondary option. As we progress in the Pi Wars competition, these findings will not only refine our robot's design but also contribute to the broader community's understanding of sensor capabilities.
 
 We look forward to applying these insights in real-world scenarios, further pushing the boundaries of what our robot can achieve. The blend of theoretical knowledge and empirical data has once again proved invaluable, underscoring the importance of rigorous testing in robotics.
 
