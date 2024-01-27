@@ -6,6 +6,8 @@ tags:
 - Robots
 - RaspberryPi
 - PiWars
+- PiWars2024
+- Sensors
 ---
 # Navigating the Spectrum: Sensor Selection for Pi Wars' Diverse Arenas #
 As we gear up for the multifaceted challenges of Pi Wars, our focus shifts to the pivotal role of sensor selection for our robot, the Overwhelming Surplus of Diggity (OSoD). Let's delve into how we plan to harness these sensors to ensure our robot can ascertain its position within the varied arenas of the competition.  
