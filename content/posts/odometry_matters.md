@@ -1,8 +1,14 @@
-
 ---
 title: "Odometry Matters"
 date: 2023-12-27T16:53:06+01:00
 draft: false
+tags:
+- Robots
+- RaspberryPi
+- PiWars
+- PiWars2024
+- Testing
+- Design
 ---
 
 ## Odometry Matters ##

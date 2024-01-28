@@ -2,6 +2,13 @@
 title: "Application Accepted"
 date: 2023-10-06T16:53:06+01:00
 draft: false
+tags:
+- Robots
+- RaspberryPi
+- PiWars
+- PiWars2024
+- Design
+- Sensors
 ---
 
 # Preparing for Pi Wars 2024: Challenges and Innovations #

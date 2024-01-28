@@ -6,6 +6,7 @@ tags:
 - Robots
 - RaspberryPi
 - PiWars
+- PiWars2024
 ---
 
 In the competitive world of Pi Wars, where ingenuity meets the rigor of rulebooks, there comes an idea that could change the game, albeit with a mischievous wink. A team with a robot named Overwhelming Surplus of Diggity (OSoD) has stumbled upon a clever, if not slightly roguish, interpretation of the Lava Palava challenge rules.

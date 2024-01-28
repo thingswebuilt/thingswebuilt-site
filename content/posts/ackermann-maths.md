@@ -2,6 +2,12 @@
 title: "Ackermann Maths"
 date: 2024-01-01T16:53:06+01:00
 draft: false
+tags:
+- Robots
+- RaspberryPi
+- PiWars
+- PiWars2024
+- Modelling
 ---
 
 # Unveiling the Mathematics Behind Independent Four-Wheel Drive with "Virtual" Ackermann Steering

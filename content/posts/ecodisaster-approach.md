@@ -6,6 +6,9 @@ tags:
 - Robots
 - RaspberryPi
 - PiWars
+- PiWars2024
+- Modelling
+- Sensors
 ---
 
 

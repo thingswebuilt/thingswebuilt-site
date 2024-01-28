@@ -2,6 +2,11 @@
 title: "Pi Wars Application Submitted"
 date: 2023-09-30T16:53:06+01:00
 draft: false
+tags:
+- Robots
+- RaspberryPi
+- PiWars
+- PiWars2024
 ---
 
 # Our Pi Wars 2024 Application: A Glimpse into Team Cyberwar's Ambitious Plans #
