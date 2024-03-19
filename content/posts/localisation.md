@@ -1,5 +1,5 @@
 ---
-title: "localisation"
+title: "Echoes & Edges: Mapping Moves"
 date: 2024-03-03T16:53:06+01:00
 draft: false
 tags:
@@ -9,10 +9,10 @@ tags:
 - PiWars2024
 - software
 - algorithms
-- mavigation
+- navigation
 ---
 
-# The Basics of Localization in Robotics: A Broader Perspective
+# Pinpoint Precision: Choreographing Our Robot's Every Move
 Localization in robotics is a cornerstone of autonomous navigation, enabling robots to comprehend their position within an environment. This capability is crucial for tasks ranging from simple navigational exercises to complex exploration and mapping missions. While odometry, landmark navigation, and GPS-based localization serve as fundamental techniques, the field of robotics has developed several advanced methods to tackle more nuanced challenges. Here's a closer look at these sophisticated approaches:
 
 ### Odometry
