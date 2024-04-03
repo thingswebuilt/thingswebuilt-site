@@ -23,11 +23,15 @@ Undeterred, we sought solace in the resilience of Ranglebox motors, known for th
 ## Navigating the Software Maze
 The software that breathed life into the ball flinger was a saga in its own right. The initial plan to harness the Pi Pico was abandoned in favor of an Arduino Nano, only to be thwarted by the limitations of serial communication. The switch to a Teensy, and finally, the full-circle return to the Pi Pico, exemplified the iterative nature of problem-solving in robotics. Each pivot was a step towards an optimal solution, driven by the constraints of Pi Wars-rule-requirements and the practicalities of remote control.
 
-"Below is a visual journey through our hardware selection process, showcasing the various microcontrollers we evaluated in our quest for the perfect setup."
+[![Microcontroller Selection Journey - A visual journey through the hardware selection process, showcasing the various microcontrollers evaluated.](sm_microcontrollers.jpg)](microcontrollers.jpg "Microcontroller Selection Journey")
+
 
 ## The Breakthrough
 With the hardware and software hurdles gradually overcome, the ball flinger began to show promise. The integration of a laser guide and fine-tuning of the servo mechanisms marked the transition from concept to reality. Yet, it was the innovative use of aluminium foil to capture the imprints of the flinger's shots that provided the critical insight needed for refinement. This simple, yet effective method revealed a discrepancy in vertical accuracy, leading to an adjustment in the ball feeding mechanism — a lesson borrowed from past challenges.
-"Our innovative testing method, captured here, utilized aluminium foil to visually represent the accuracy of our ball flinger. The resulting imprints provided us with invaluable data to refine our aim."
+
+[![Laser Targeting System - Demonstrating the laser guide mechanism for enhanced aiming accuracy.](sm_laser-targetting.jpg)](laser-targetting.jpg "Laser Targeting System ")
+[![Innovative Testing with Aluminium Foil - Utilizing aluminium foil to capture the precision of our ball flinger's shots.](sm_foil-imprints.jpg)](foil-imprints.jpg "Innovative Testing with Aluminium Foil - Utilizing aluminium foil to capture the precision of our ball flinger's shots. the ball imprints are visible in the foil")
+
 
 ## Towards Autonomy
 The realization that our autonomous performance didn't need to be flawless, but merely effective, to compete successfully was liberating. This strategic insight, coupled with the confirmation of a calibration period, offered a glimmer of hope. Our "3D scan" technique, while not perfect, became a key asset in our arsenal, promising the potential to discern targets amidst the chaos.
@@ -35,6 +39,8 @@ The realization that our autonomous performance didn't need to be flawless, but 
 
 {{< youtube EudxijrshXE >}}
 {{< youtube ZblxMeU8SJk >}}
+[![Front View of the Ball Flinger - Showcasing the ball flinger's design and the integration of its components.](sm_front-view.jpg)](front-view.jpg "Front View of the Ball Flinger - Showcasing the ball flinger's design and the integration of its components.")
+[![Rear View of the Ball Flinger - Highlighting the engineering and design intricacies from a different perspective.](sm_rear-view.jpg)](rear-view.jpg "Rear View of the Ball Flinger - Highlighting the engineering and design intricacies from a different perspective.")
 
 ## Looking Forward
 As we prepare to face the horde at Pi Wars, our journey with the ball flinger stands as a testament to the iterative process of engineering. From the ashes of burnt-out motors and speed controllers rose a device capable of challenging the undead. The path was fraught with setbacks, but each was a stepping stone towards a solution that balanced precision, performance, and strategic prowess.
